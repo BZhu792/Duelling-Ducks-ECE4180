@@ -11,7 +11,7 @@ Link to project on Arm Mbed website: https://os.mbed.com/users/cwang776/code/ECE
 ## Overview
 We tried to recreate the classic Tank arcade game in real-life. There are two tanks, more affectionately known as ducks due to their form factor, that can be controlled via Bluetooth using the Adafruit Bluefruit Connect App's Controller Pad. Each tank begins with three lives as indicated by three red LEDs near the back. A player can make seven moves: go forward, go back, turn the tank left, turn the tank right, turn the turret left, turn the turret right, and fire. However, a player has a one-second "cooldown" after firing each time, which is a period of time that ignores any Bluetooth command. The game ends when one player reaches zero lives.  
 
-Sounds accompanies various game scenarios. There is a sound effect for firing, a ricochet sound effect for when a player gets hit, and an explosion sound effect when a player loses all three lives. The shooting is done using an IR transmitter inside each tank's barrel with an IR receiver mounted to the front of each tank's turret. 
+Sounds accompany various game scenarios. There is a sound effect for firing, a ricochet sound effect for when a player gets hit, and an explosion sound effect when a player loses all three lives. The shooting is done using an IR transmitter inside each tank's barrel with an IR receiver mounted to the front of each tank's turret. 
 
 Here are some photos of our finished product:  
 <img src="Photos/IMG_6380.JPG" width="400">
@@ -58,7 +58,7 @@ Wiring Diagram:
 ![schematic](Photos/schematic.png)
 
 ### Firmware
-Some text here
+
 
 ### Mechanical
 Most of the robot is assembled using parts following the instructions from the ECE 4180 robot kit. We were able to attach the breadboards to the chassis and the servo mount to the turret base using 3M heavy duty double-sided tape. One part that was unique to our design was the turret, which was CADed by our team in TinkerCad and 3D-printed at the Invention Studio. The requirements was that it had an opening on the top for electronics and wires to go through, have the barrel width/height just wide enough to support the width/height of the IR transmitter (approx. 1.2cm width by 1.8cm height), and be in the general shape of a tank turret. Our limit was the 3D-printing time, and thus we had to restrict the overall turret's radius and height. The link the TinkerCad file is https://www.tinkercad.com/things/6hFdsLTgLBO and here is a screenshot of the workspace:  
