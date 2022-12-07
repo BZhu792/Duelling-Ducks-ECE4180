@@ -58,7 +58,42 @@ Wiring Diagram:
 ![schematic](Photos/schematic.png)
 
 ### Firmware
+When developing the firmware for the robot, we wanted to assure that the tank could function according to design expections with minimal input delay from the end user. To this end, we utilized RTOS threads to implement the primary functionality of moving, aiming, firing, and receiving commands. Additionally, audio snippets were played by relevant threads with the hardware timers utilized by the Ticker library. 
 
+
+Volatile inputs:
+- speed_left    => speed of the left-hand motor
+- speed_right   => speed of the right-hand motor
+- turret_delta  => incremental angle change of the turret servo
+
+Drive:
+- Sets the speed of both wheel motors every 1/10th of a second
+- Utilizes: speed_left, speed_right
+
+Turret:
+- Increments, decrements, or holds the position of the turret servo every 1/40th of a second
+- Utilizes: turret_delta
+
+IR Thread:
+- Reads IR sensor input and detects hit if applicable
+- 
+- Decreases lives and plays sound effect upon hit received
+
+Control Thread
+- Received bluetooth input from digital control pad
+  - Control pad moves the robot forwards, backwards, and rotationally
+  - Face buttons 1 and 2 rotate the turret left and right
+  - Face button 3 fires the cannon
+- Sets:
+  - speed_left
+  - speed_right
+  - turret_delta
+- Plays sound effect for firing cannon
+
+
+Constraints:
+- Period value shared amongst all PWM outputs. The [SoftPwm library](https://os.mbed.com/teams/FRC-Hackathon/code/SoftPWM//file/9aba3dc9cd97/SoftPWM.cpp/) was used for the lower frequency motor controller and servo. The Speaker uses AnalogOut to circumvent this issue
+- Although running multiple threads at once is possible, there is a possiblity of a voltage drop when activating too many modules at once (causing an mbed reset)
 
 ### Mechanical
 Most of the robot is assembled using parts following the instructions from the ECE 4180 robot kit. We were able to attach the breadboards to the chassis and the servo mount to the turret base using 3M heavy duty double-sided tape. One part that was unique to our design was the turret, which was CADed by our team in TinkerCad and 3D-printed at the Invention Studio. The requirements was that it had an opening on the top for electronics and wires to go through, have the barrel width/height just wide enough to support the width/height of the IR transmitter (approx. 1.2cm width by 1.8cm height), and be in the general shape of a tank turret. Our limit was the 3D-printing time, and thus we had to restrict the overall turret's radius and height. The link the TinkerCad file is https://www.tinkercad.com/things/6hFdsLTgLBO and here is a screenshot of the workspace:  
