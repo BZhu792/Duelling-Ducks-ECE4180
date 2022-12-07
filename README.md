@@ -14,10 +14,10 @@ We tried to recreate the classic Tank arcade game in real-life. There are two ta
 Sounds accompanies various game scenarios. There is a sound effect for firing, a ricochet sound effect for when a player gets hit, and an explosion sound effect when a player loses all three lives. The shooting is done using an IR transmitter inside each tank's barrel with an IR receiver mounted to the front of each tank's turret. 
 
 Here are some photos of our finished product:  
-<img src="Photos/IMG_6380.JPG" width="480">
-<img src="Photos/IMG_6382.JPG" width="480">
-<img src="Photos/IMG_6383.JPG" width="480">
-<img src="Photos/IMG_6384.JPG" width="480">
+<img src="Photos/IMG_6380.JPG" width="300">
+<img src="Photos/IMG_6382.JPG" width="300">
+<img src="Photos/IMG_6383.JPG" width="300">
+<img src="Photos/IMG_6384.JPG" width="300">
 
 ## Components
 The following components were used for each tank:
