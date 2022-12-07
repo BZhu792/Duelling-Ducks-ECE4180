@@ -58,7 +58,7 @@ Wiring Diagram:
 ![schematic](Photos/schematic.png)
 
 ### Firmware
-When developing the firmware for the robot, we wanted to assure that the tank could function according to design expections with minimal input delay from the end user. To this end, we utilized RTOS threads to implement the primary functionality of moving, aiming, firing, and receiving commands. Additionally, audio snippets were played by relevant threads with the hardware timers utilized by the Ticker library. 
+When developing the firmware for the robot, we wanted to assure that the tank could function according to design expections with minimal input delay from the end user. To this end, we utilized RTOS threads to implement the primary functionality of moving, aiming, firing, and receiving commands. Additionally, audio snippets were played by their related threads using the Ticker library. 
 
 
 Volatile inputs:
