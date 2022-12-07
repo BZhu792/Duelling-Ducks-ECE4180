@@ -59,8 +59,13 @@ Wiring Diagram:
 
 ### Firmware
 Some text here
+
 ### Mechanical
-Some text here
+Most of the robot is assembled using parts following the instructions from the ECE 4180 robot kit. We were able to attach the breadboards to the chassis and the servo mount to the turret base using 3M heavy duty double-sided tape. One part that was unique to our design was the turret, which was CADed by our team in TinkerCad and 3D-printed at the Invention Studio. The requirements was that it had an opening on the top for electronics and wires to go through, have the barrel width/height just wide enough to support the width/height of the IR transmitter (approx. 1.2cm width by 1.8cm height), and be in the general shape of a tank turret. Our limit was the 3D-printing time, and thus we had to restrict the overall turret's radius and height. The link the TinkerCad file is https://www.tinkercad.com/things/6hFdsLTgLBO and here is a screenshot of the workspace:  
+<img src="Photos/tinkercard.png" width="720">
+  
+Here is a photo of 3D-printing:  
+<img src="Photos/IMG_6352.JPG" width="720">
 
 ## Demo
 
