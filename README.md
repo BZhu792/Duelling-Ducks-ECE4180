@@ -6,7 +6,8 @@ Cynthia Wang
 Bo Han Zhu  
 _Georgia Institute of Technology_
 
-Link to project on Arm Mbed website: https://os.mbed.com/users/cwang776/code/ECE4180-FinalProject/
+Link to project on Arm Mbed website: https://os.mbed.com/users/cwang776/code/ECE4180-FinalProject/  
+Lint to powerpoint slides: https://docs.google.com/presentation/d/1dM0LQn1OPCKegBvp491FA8UDcHc10sQX1MyTWFbMCmI/edit#slide=id.p
 
 ## Overview
 We tried to recreate the classic Tank arcade game in real-life. There are two tanks, more affectionately known as ducks due to their form factor, that can be controlled via Bluetooth using the Adafruit Bluefruit Connect App's Controller Pad. Each tank begins with three lives as indicated by three red LEDs near the back. A player can make seven moves: go forward, go back, turn the tank left, turn the tank right, turn the turret left, turn the turret right, and fire. However, a player has a one-second "cooldown" after firing each time, which is a period of time that ignores any Bluetooth command. The game ends when one player reaches zero lives.  
@@ -51,7 +52,6 @@ Power:
 - 1 power barrel connector jack
 
 ### Electrical
-Some text here
 
 Wiring Diagram:
 
@@ -76,7 +76,6 @@ Turret:
 
 IR Thread:
 - Reads IR sensor input and detects hit if applicable
-- 
 - Decreases lives and plays sound effect upon hit received
 
 Control Thread
